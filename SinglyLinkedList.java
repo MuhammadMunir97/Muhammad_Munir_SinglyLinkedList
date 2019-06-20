@@ -12,23 +12,31 @@ public class SinglyLinkedList {
         } else {
             Node runner = head;
             while(runner.next != null) {
-                runner = runner.next;
+                runner = runner.next;git
             }
             runner.next = newNode;
         }
     }   
     
     public void remove(){
-        while(head.next != null) {
-            if (head.next == null){
-                head = null;
+        if(head == null) {
+          return;
+        } else {
+            Node runner = head;
+            while(runner.next.next != null) {
+                runner = runner.next;
             }
+            runner.next = null;
         }
     }
 
     public void printValues(){
-        if (head.next != null){}
-        System.out.println(head.val);
+        Node runner = head;
+            while(runner.next != null) {
+                System.out.println(runner.value);
+                 runner = runner.next;
+            }
+            System.out.println(runner.value);
     }
 
 }
