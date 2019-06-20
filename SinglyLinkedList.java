@@ -12,7 +12,7 @@ public class SinglyLinkedList {
         } else {
             Node runner = head;
             while(runner.next != null) {
-                runner = runner.next;git
+                runner = runner.next;
             }
             runner.next = newNode;
         }
