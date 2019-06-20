@@ -19,16 +19,25 @@ public class SinglyLinkedList {
     }   
     
     public void remove(){
-        while(head.next != null) {
-            if (head.next == null){
-                head = null;
+     Node newNode = null;
+        if(head == null) {
+            head = newNode;
+        } else {
+            Node runner = head;
+            while(runner.next.next != null) {
+                runner = runner.next;
             }
+            runner.next = null;
         }
     }
 
     public void printValues(){
-        if (head.next != null){}
-        System.out.println(head.val);
+        Node runner = head;
+            while(runner.next != null) {
+                System.out.println(runner.value);
+                 runner = runner.next;
+            }
+            System.out.println(runner.value);
     }
 
 }
