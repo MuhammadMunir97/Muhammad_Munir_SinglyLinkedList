@@ -19,9 +19,8 @@ public class SinglyLinkedList {
     }   
     
     public void remove(){
-     Node newNode = null;
         if(head == null) {
-            head = newNode;
+          return;
         } else {
             Node runner = head;
             while(runner.next.next != null) {
